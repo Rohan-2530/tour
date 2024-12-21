@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Planner</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app9">
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <button onclick="document.location='planner.html'">Login</button>
+      <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="email" id="signup-email" placeholder="Email" required><br>
+      <input type="password" id="signup-password" placeholder="Password" required><br>
+      <button<a href="trip.html" ></a>onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href = "trip.html"; onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- Trip Planner Form -->
+    <div id="trip-planner" style="display: none;">
+      <h2>Trip Planner</h2>
+      <form>
+        <label for="destination">Destination</label><br>
+        <select id="destination" required>
+          <option value="Paris">Paris</option>
+          <option value="Tokyo">Tokyo</option>
+          <option value="New York">New York</option>
+        </select><br>
+
+        <label for="accommodation">Accommodation</label><br>
+        <select id="accommodation" required>
+          <option value="Hotel">Hotel</option>
+          <option value="Airbnb">Airbnb</option>
+        </select><br>
+
+        <label for="activity">Activity</label><br>
+        <select id="activity" required>
+          <option value="Sightseeing">Sightseeing</option>
+          <option value="Adventure">Adventure</option>
+        </select><br>
+
+        <label for="expense">Expense</label><br>
+        <input type="number" id="expense" placeholder="Enter your expense" required><br>
+
+        <button type="button" onclick="submitTrip()">Submit</button>
+      </form>
+      <h3>Team Selections</h3>
+      <canvas id="tripChart"></canvas>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

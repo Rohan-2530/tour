@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Group Travel Planner</h1>
+            <p>Plan your next group trip together!</p>
+        </header>
+
+        <section class="voting">
+            <h2>Vote for Your Preferences</h2>
+
+            <div class="vote-section">
+                <h3>Destinations</h3>
+                <form>
+                    <label>
+                        <input type="radio" name="destination" value="Paris"> Paris
+                    </label><br>
+                    <label>
+                        <input type="radio" name="destination" value="Tokyo"> Tokyo
+                    </label><br>
+                    <label>
+                        <input type="radio" name="destination" value="New York"> New York
+                    </label><br>
+                    <button type="submit">Submit Vote</button>
+                </form>
+            </div>
+
+            <div class="vote-section">
+                <h3>Accommodations</h3>
+                <form>
+                    <label>
+                        <input type="radio" name="accommodation" value="Hotel"> Hotel
+                    </label><br>
+                    <label>
+                        <input type="radio" name="accommodation" value="Airbnb"> Airbnb
+                    </label><br>
+                    <label>
+                        <input type="radio" name="accommodation" value="Hostel"> Hostel
+                    </label><br>
+                    <button type="submit">Submit Vote</button>
+                </form>
+            </div>
+
+            <div class="vote-section">
+                <h3>Activities</h3>
+                <form>
+                    <label>
+                        <input type="radio" name="activity" value="Sightseeing"> Sightseeing
+                    </label><br>
+                    <label>
+                        <input type="radio" name="activity" value="Adventure Sports"> Adventure Sports
+                    </label><br>
+                    <label>
+                        <input type="radio" name="activity" value="Beach Relaxation"> Beach Relaxation
+                    </label><br>
+                    <button type="submit">Submit Vote</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="expense-tracking">
+            <h2>Expense Tracking</h2>
+            <form>
+                <label for="expense-item">Expense Item:</label>
+                <input type="text" id="expense-item" name="expense-item" placeholder="Enter item (e.g., flight, meals)"><br><br>
+                <label for="amount">Amount ($):</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount"><br><br>
+                <button type="submit">Add Expense</button>
+            </form>
+
+            <h3>Expense Breakdown</h3>
+            <ul id="expense-list">
+                <!-- List of added expenses will appear here -->
+            </ul>
+
+            <h4>Total Expense: $<span id="total-expense">0</span></h4>
+        </section>
+    </div>
+</body>
+</html>
